@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavram Eşleştirme Oyunu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kavram Eşleştirme Oyunu</h1>
+    
+    <div id="menu">
+        <h2>Ana Menü</h2>
+        <p><span id="completed-levels">0</span></p>
+        <button id="decreaseButton">Camii İnşa Et</button>
+        <div id="warningMessage" style="display: none; color: red;">Henüz yeterince bölüm tamamlamadınız.</div>
+        <div id="gifContainer" style="display: none;">
+            <img src="images/camii.gif" alt="Loading..." />
+        </div>
+        <button id="start-game">Oyuna Başla</button>
+        <div id="level-list"></div>
+    </div>
+    
+    <div id="game-section" style="display:none;">
+        <h2 id="level-title">Bölüm 1</h2>
+        <p>Kavramları anlamlarıyla eşleştirerek duvarı tamamla!</p>
+
+        <div class="game-container">
+            <div class="concepts">
+                <h2>Kavramlar</h2>
+                <ul id="concepts-list">
+                    <!-- Kavramlar buraya JavaScript ile rastgele gelecek -->
+                </ul>
+            </div>
+
+            <div class="meanings">
+                <h2>Anlamlar</h2>
+                <ul id="meanings-list">
+                    <!-- Anlamlar buraya JavaScript ile rastgele gelecek -->
+                </ul>
+            </div>
+        </div>
+
+        <h2>Duvar İnşa Alanı</h2>
+        <div class="wall" id="wall">
+            <!-- Duvar tamamlanınca burada görünecek -->
+        </div>
+
+        <div id="result-message"></div>
+        <button id="back-to-menu">Ana Menüye Dön</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    

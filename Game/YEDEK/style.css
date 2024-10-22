@@ -1,0 +1,124 @@
+/* Daha önceki CSS kodlarına ekleme */
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.wall.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+li.correct {
+    background-color: lightgreen;
+}
+
+li.incorrect {
+    background-color: lightcoral;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.wall {
+    margin-top: 20px;
+    border: 2px dashed #333;
+    padding: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Üst üste dizilsin */
+    align-items: center;
+}
+
+.wall .half-brick {
+    background-color: #f0f0f0;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.wall .half-brick:before {
+    content: '';
+    background-color: lightgray;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 0 0 3px 3px;
+}
+
+.wall .full-brick {
+    background-color: lightgreen;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+    width: 160px;
+    height: 60px;
+    border-radius: 3px;
+}
+
+
+
+@keyframes crumble {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(10px) rotate(10deg);
+    }
+    50% {
+        transform: translateY(20px) rotate(-10deg);
+    }
+    75% {
+        transform: translateY(30px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(40px) rotate(0);
+        opacity: 0; /* Düşerken kaybolur */
+    }
+}
+
+.wall .half-brick.crumble {
+    animation: crumble 0.8s ease forwards; /* Yıkılma animasyonu */
+}
+
+.wall .full-brick.crumble {
+    animation: crumble 0.8s ease forwards; /* Tam tuğla için de animasyon */
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavram Eşleştirme Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kavram Eşleştirme Oyunu</h1>
+    <p>Kavramları anlamlarıyla eşleştirerek duvarı tamamla!</p>
+
+    <div class="game-container">
+        <div class="concepts">
+            <h2>Kavramlar</h2>
+            <ul id="concepts-list">
+                <!-- Kavramlar buraya JavaScript ile rastgele gelecek -->
+            </ul>
+        </div>
+
+        <div class="meanings">
+            <h2>Anlamlar</h2>
+            <ul id="meanings-list">
+                <!-- Anlamlar buraya JavaScript ile rastgele gelecek -->
+            </ul>
+        </div>
+    </div>
+
+    <h2>Duvar İnşa Alanı</h2>
+    <div class="wall" id="wall">
+        <!-- Duvar tamamlanınca burada görünecek -->
+    </div>
+
+    <div id="result-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
