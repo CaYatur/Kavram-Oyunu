@@ -9,4 +9,4 @@ Ders kavramlarını tanımlarıyla eşleştirme oyunu. Node.js (Express) sunucus
 
 ---
 
-Çağan Turgut · [caganturgut.com](https://caganturgut.com) · [GitHub](https://github.com/CaYatur)
+Çağan Turgut · [GitHub](https://github.com/CaYatur)
